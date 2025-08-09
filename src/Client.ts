@@ -339,7 +339,7 @@ export class Client extends events.EventEmitter {
         const data: Data = JSON.parse(rawData);
         this.emit("raw", data);
 
-        switch (data.type) {
+        switch (data?.type) {
             case "hello":
                 let hello = data as Hello;
 
